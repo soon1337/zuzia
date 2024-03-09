@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="banner">
+        <img src="banner.png" alt="">
+    </div>
+
+    <div class = "menu">  
+        <a href="index.html">Przypomnienie</a>
+        <a href="motywacja.html" id = "active">Motywacja</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="powody.html">Powody</a>
+    </div>
+    
+    <div id="content">
+        <h2>Losowa motywacja . . .</h2><br><br>
+        <p style="text-align: center;">Kliknij na przycisk, aby wygenerować losowe hasło motywujące!</p>
+        <br>
+        <center><button onclick="generate()">Kliknij</button></center>
+        <p style="text-align: center; margin-top: 20px;" id="display"></p>
+    </div>
+
+    <footer>
+        <p>Pamiętaj, że każdego dnia kocham cię jeszcze bardziej niż poprzedniego!!!</p>
+    </footer>
+</body>
+</html>
+<script>
+    let arr = [
+  "Czasem trzeba się wycofać, by zrobić duży krok naprzód.",
+  "Pamiętaj, że cokolwiek by się nie działo ja jestem przy tobie!",
+  "Każdy dzień to nowa szansa, aby zacząć od nowa i osiągnąć swoje cele.",
+  "Mimo tak ciężkiej przeszłości tak daleko zaszłaś!",
+  "Twoje marzenia są tego warte. Nie rezygnuj, idź naprzód!",
+  "Sukces to suma małych wysiłków powtarzanych codziennie.",
+  "Gdyby życie było łatwe, nikt by nie wzrósł.",
+  "Nie liczy się to, jak wiele razy upadasz, ale jak wiele razy wstajesz.",
+  "Pamiętaj, że nawet najdłuższa podróż zaczyna się od pierwszego kroku.",
+  "Bądź odważna. Nawet najwięksi zdobywcy musieli stawić czoło strachowi.",
+  "Twoje ograniczenia określają tylko to, co wiesz dzisiaj. Rozszerz horyzonty i idź naprzód!",
+  "Kocham cię, walcz dla mnie!",
+  "Niezależnie od tego jak źle by było, nigdy się nie poddawaj!",
+  "Gdy tylko upadniesz napisz, a pomogę ci wstać!",
+  "Nawet po najciemniejszej nocy nadchodzi świt!"
+];
+
+function generate() 
+{
+  let randomIndex = Math.floor(Math.random() * arr.length);
+  let randomQuote = arr[randomIndex];
+  document.getElementById("display").innerText = randomQuote;
+}
+</script>
+
+<style>
+    button
+    {
+        margin-right: 180px;
+        height: 70px;
+        width: 120px;
+        border-radius: 10px;
+        background-color: #111;
+        color: white;
+        font-size: 20px;
+        border: 2px solid white;
+    }
+    button:hover
+    {
+        cursor: pointer;
+    }
+</style>
